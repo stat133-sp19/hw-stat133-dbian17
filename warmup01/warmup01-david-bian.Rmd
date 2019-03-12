@@ -1,0 +1,103 @@
+---
+title: "warmup01-david-bian.Rmd"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Problem 1: [Jar Jar Binks](https://starwars.fandom.com/wiki/Jar_Jar_Binks)
+
+![](\Gen\School\133\Jar_Jar_aotc.jpg)
+
+[Jar Jar Binks](https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg/revision/latest/scale-to-width-down/500?cb=20080303052132)
+
+
+**A famous quote by Jar Jar Banks:**
+
+> No, no, mesa stay. Mesa called Jar Jar Binks. Mesa your humble servant.
+
+
+|Description|Value |
+------------|------|
+|Height     |1.96m |
+|Gender     |Male  |
+|Species    |Gungan|
+|Eye Color  |Yellow|
+|Skin Color |Orange|
+
+
+
+
+
+*************
+
+
+
+#Problem 2: Apple Pie
+
+*Ingredients:*
+
+* 1/2 cup brown sugar
+* 1/4 cup granulated sugar
+* 1/4 fine sea salt
+* 2 teaspoons ground cinnamon
+* 1/4 teaspoon ground nutmeg
+* 1/4 teaspoon ground ginger
+* 1/8 teaspoon ground cloves
+* 4 1/2 pounds baking apples
+* 3 tablespoons tapioca starch
+* 1 recipe for pie dough
+* 1 egg, lightly beaten
+* coarse sugar for sprinkling
+
+*Tools:*
+
+* Brush
+
+
+*Instructions:*
+
+1. Mix the ingredients together to create the filling
+2. Wrap the dough around the filling
+3. Brush egg wash on the surface of the crust
+4. Heat the oven to 400 degrees Farenheit and bake for 75 minutes or until internal temperature is 195 degrees Farenheit
+
+![](http://s3.amazonaws.com/studio-me/system/photos/photos/000/774/289/large/iStock_000029434134_Small.jpg?1412368813)
+
+[Apple Pie](http://s3.amazonaws.com/studio-me/system/photos/photos/000/774/289/large/iStock_000029434134_Small.jpg?1412368813)
+
+### No special seasonings of the year or alternate recipes
+
+
+
+**********
+
+#Problem 3: Euclidean Distance
+
+
+**Definition**
+
+The **Euclidean distance** between points **p** and **q** is the length of the line segment connecting them **$\overline{pq}$**.
+
+In Cartesian coordinates, if **p** = ($p_1$, $p_2$,..., $p_n$) and **q** = ($q_1$, $q_2$,...,$q_n$) are two points in Euclidean *n*-space, then the distance (d) form **p** to **q**, or from **q** to **p** is given by the Pythagorean formula.
+
+d(**p**, **q**) = d(**q**,**p**) = $\sqrt{(q_1-p_1)^2+(q_2-p_2)^2+...+(q_n-p_n)^2}$ = $\sqrt{\sum_{k=1}^{k=n} {(p_k-q_k)^2}}$
+
+The position of a point in a Euclidean *n*-space is a Euclidean vector. So, **p** and **q** may be represented as Euclidean vectors, starting from the origin of the space (initial point) with their tips (terminal points) ending at the two points. The **Euclidean norm**, or **Euclidean length**, or **magnitude** of a vector measures the length of the vector.
+
+$\left\lVert p\right\rVert$ = 
+$\sqrt{p_1^2 + p_2^2 +...+ p_n^2}$ =
+$\sqrt{p\cdot p}$,
+
+where the last expression involves dot product.
+
+
+
+
+
+
+
+
