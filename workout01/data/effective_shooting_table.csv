@@ -1,0 +1,8 @@
+# A tibble: 5 x 5
+  name           total_shots  made perc_made eperc_made
+  <chr>                <int> <int>     <dbl>      <dbl>
+1 Andre Iguodala         371   192     0.518      0.596
+2 Draymond Green         578   245     0.424      0.488
+3 Kevin Durant           915   495     0.541      0.598
+4 Klay Thompson         1220   575     0.471      0.572
+5 Stephen Curry         1250   584     0.467      0.579

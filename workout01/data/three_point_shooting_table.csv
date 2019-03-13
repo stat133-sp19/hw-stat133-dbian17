@@ -1,0 +1,8 @@
+# A tibble: 5 x 5
+  name           total  made perc_made eperc_made
+  <chr>          <int> <int>     <dbl>      <dbl>
+1 Andre Iguodala   161    58     0.360      0.540
+2 Draymond Green   232    74     0.319      0.478
+3 Kevin Durant     272   105     0.386      0.579
+4 Klay Thompson    580   246     0.424      0.636
+5 Stephen Curry    687   280     0.408      0.611
