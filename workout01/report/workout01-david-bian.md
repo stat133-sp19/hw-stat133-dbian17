@@ -33,7 +33,7 @@ Below are the effective shooting percentages of the deathlineup and other releva
 
 Today we explore the hypothesis that shooting more two pointers increases your effective shooting percentage than shooting more three pointers. We look at our three typical players and then two outliers within the death lineup.
 
-First let us look at three Golden State Warriors that follow this interesting trend. In this group, we have shooting guard Klay Thompson, small forward Kevin Durant, and power forward Andre Iguodala. Below is a table of their effective shooting percentages and other relevant data.
+First let us look at three Golden State Warriors that follow this interesting trend. In this group, we have shooting guard Klay Thompson, small forward Kevin Durant, and power forward Andre Iguodala. Below is a table of their effective shooting percentages and other relevant data as well as a chart of each player's attempted shots.
 
     ##                                                             X..A.tibble..3.x.7
     ## 1   name       total_shots two_made three_made total_made perc_made eperc_made
@@ -42,7 +42,7 @@ First let us look at three Golden State Warriors that follow this interesting tr
     ## 4 2 Andre Igu~         371      134         58        192     0.518      0.596
     ## 5 3 Klay Thom~        1220      329        246        575     0.471      0.572
 
-When we look at what percentage of a player's made shots are two-pointers, a trend begins to show. The more two-pointers a player makes, the higher their effective field goal percentage. To go more in depth, below is a chart of all the player's shot attempts.
+<img src="../images/gsw-shot-charts.png" width="80%" style="display: block; margin: auto;" /> When we look at what percentage of a player's made shots are two-pointers, a trend begins to show. The more two-pointers a player makes, the higher their effective field goal percentage. To go more in depth, below is a chart of all the player's shot attempts.
 
 <img src="../images/kevin-durant-shot-chart.png" width="80%" style="display: block; margin: auto;" /><img src="../images/andre-iguodala-shot-chart.png" width="80%" style="display: block; margin: auto;" /><img src="../images/klay-thompson-shot-chart.png" width="80%" style="display: block; margin: auto;" />
 
