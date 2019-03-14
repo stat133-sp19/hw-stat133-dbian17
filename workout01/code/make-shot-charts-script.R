@@ -97,6 +97,32 @@ ggsave(filename = '../images/gsw-shot-charts.pdf',
        device = 'pdf',
        width = 8, height = 7)
 
+
+ggsave(filename = '../images/klay-thompson-shot-chart.png', 
+       plot = klay_shot_chart,
+       device = 'png',
+       width = 6.5, height = 5)
+
+ggsave(filename = '../images/andre-iguodala-shot-chart.png', 
+       plot = andre_shot_chart,
+       device = 'png',
+       width = 6.5, height = 5)
+
+ggsave(filename = '../images/draymond-green-shot-chart.png', 
+       plot = draymond_shot_chart,
+       device = 'png',
+       width = 6.5, height = 5)
+
+ggsave(filename = '../images/kevin-durant-shot-chart.png', 
+       plot = kevin_shot_chart,
+       device = 'png',
+       width = 6.5, height = 5)
+
+ggsave(filename = '../images/stephen-curry-shot-chart.png', 
+       plot = stephen_shot_chart,
+       device = 'png',
+       width = 6.5, height = 5)
+
 ggsave(filename = "../images/gsw-shot-charts.png",
        plot = shots_chart,
        device = 'png',

@@ -80,10 +80,6 @@ two_point_shooting <- all_shots %>%
             three_perc_made = 0) %>%
   arrange(desc(two_perc_made))
 
-sink("../data/two_point_shooting_table.txt")
-two_point_shooting
-sink()
-
 three_point_shooting <- all_shots %>% 
   group_by(name) %>%
   filter(shot_type == '3PT Field Goal') %>%
@@ -93,10 +89,6 @@ three_point_shooting <- all_shots %>%
             two_perc_made = 0,
             three_perc_made = three_made/total) %>%
   arrange(desc(three_perc_made))
-
-sink("../data/three_point_shooting_table.txt")
-three_point_shooting
-sink()
 
 both <- rbind(two_point_shooting, three_point_shooting)
 
@@ -110,7 +102,20 @@ effective_shooting<- both %>%
             eperc_made = (two_made + 1.5*three_made)/total_shots) %>%
   arrange(desc(eperc_made))
 
-sink("../data/effective_shooting_table.txt")
+sink("../data/effective_shooting_table.csv")
 effective_shooting
 sink()
+
+kevin_klay_andre <- filter(effective_shooting, name == "Kevin Durant" | name == "Andre Iguodala" | name == "Klay Thompson")
+
+sink("../data/kevin_klay_andre.csv")
+kevin_klay_andre
+sink()
+
+steph_draymond <- filter(effective_shooting, name == "Stephen Curry" | name == "Draymond Green")
+
+sink("../data/steph_draymond.csv")
+steph_draymond
+sink()
+
 

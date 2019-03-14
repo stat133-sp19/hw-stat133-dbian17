@@ -1,0 +1,5 @@
+# A tibble: 2 x 7
+  name       total_shots two_made three_made total_made perc_made eperc_made
+  <chr>            <int>    <dbl>      <dbl>      <dbl>     <dbl>      <dbl>
+1 Stephen C~        1250      304        280        584     0.467      0.579
+2 Draymond ~         578      171         74        245     0.424      0.488

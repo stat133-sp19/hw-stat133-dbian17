@@ -1,0 +1,6 @@
+# A tibble: 3 x 7
+  name       total_shots two_made three_made total_made perc_made eperc_made
+  <chr>            <int>    <dbl>      <dbl>      <dbl>     <dbl>      <dbl>
+1 Kevin Dur~         915      390        105        495     0.541      0.598
+2 Andre Igu~         371      134         58        192     0.518      0.596
+3 Klay Thom~        1220      329        246        575     0.471      0.572
