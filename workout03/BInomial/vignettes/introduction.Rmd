@@ -21,7 +21,6 @@ of trials and a probaiblity for success. There are several functions that can be
 plot and summarize both the PDF and CDF of a binomial distribution.
 
 
-
 ### Creating a Binomial Random Variabe
 
 Create a Binomial random variable using the bin_variable() function, which takes in a number of "trial" and the"probaiblity" of success. The function creates an object with and attribute "trial" and "probability" that you can use for other functions in the Binomial function.
@@ -50,7 +49,18 @@ You can use the function bin_probability(), which takes in parameters "success",
 
 bin_probability(2, 5, .4)
 ```
+### Calculating key statistics
 
+You can use several functions to find key statistics of binomial distribution.
+
+```{r}
+bin_mean(10, .2)
+bin_variance(10, .2)
+bin_mode(10, .2)
+bin_skewness(10, .2)
+bin_kurtosis(10, .2)
+
+```
 
 ### Finding a Binomial PMF or CDF
 
