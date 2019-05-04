@@ -7,11 +7,11 @@
 bin_kurtosis(trials, prob)
 }
 \arguments{
-\item{n}{number of trials, prob probablity of success in each trial}
+\item{n}{number of trials}
 }
 \value{
-the kurtosis of the given binomial distribution with n trials and probability prob of success for each trial
+the kurtosis of the given binomial distribution with "trials "trials and probability "prob" of success
 }
 \description{
-calculates the kurtosis of the number of successes given a number of trials and probability of success for each trial
+finds the kurtosis of a binomial distribution with "trials" and probability "prob"
 }

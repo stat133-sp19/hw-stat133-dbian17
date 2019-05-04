@@ -7,16 +7,18 @@
 bin_choose(n, k)
 }
 \arguments{
-\item{n}{number of trials, k number of successes}
+\item{n}{number of trials}
+
+\item{k}{number of successes}
 }
 \value{
 the number of combinations in which k successes can occur in n trials
 }
 \description{
-calculates the number of combinations in which k successes can occur in n trials
+calculates n choose k
 }
 \examples{
-# Calculates the number of combinations in which 0 through 2 successes can happen in 5 trials
-bin_choose(n = 5, k = 0:2)
+# Calculates the number n choose k for n = 7 and k =0,1,2,3
+bin_choose(n = 7, k = 0:3)
 
 }

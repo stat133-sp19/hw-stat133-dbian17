@@ -35,13 +35,22 @@ var$prob
 
 ### Summarizing a Binomial Random Variable
 
-You can find key metrics of a Binomial object that you created from bin_variable() using the summary() function.
+You can find key metrics of a Binomial object that you created from bin_variable() using the summary() method.
 
 ```{r}
 
 summary(var)
 
 ```
+### Calculating a specific probability for a Binomial Distribution
+
+You can use the function bin_probability(), which takes in parameters "success", "trial", and "prob", to calculate the probability of getting a certain number of successes given a number of trials and the probability of success.
+
+```{r}
+
+bin_probability(2, 5, .4)
+```
+
 
 ### Finding a Binomial PMF or CDF
 
@@ -58,7 +67,7 @@ cdf_var
 
 ### Plotting a Binomial Distribution
 
-The Binomial package allows for easy visualization of a Binomial distribution. You can use the plot() function on an object created by the bin_distribution() or bin_cummulative() functions
+The Binomial package allows for easy visualization of a Binomial distribution. You can use the plot() method on an object created by the bin_distribution() or bin_cummulative() functions
 to generate a plot.
 
 ```{r}

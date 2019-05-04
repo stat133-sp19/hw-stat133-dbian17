@@ -1,19 +1,19 @@
-context("Check summary measures")
+context("Check aux functions")
 
-test_that("private function aux_mean produces correct results", {
+test_that("aux_mean is correct", {
 
-  expect_equal(aux_mean(6, .5),
-               3)
-  expect_equal(aux_mean(5, .5),
-               2.5)
-  expect_equal(aux_mean(20, 1),
-                        20)
+  expect_equal(aux_mean(8, .5),
+               4)
+  expect_equal(aux_mean(10, .5),
+               5)
+  expect_equal(aux_mean(40, .8),
+                        32)
 })
 
 
-test_that("private function aux_variance produces correct results", {
+test_that("aux_variance is correct", {
 
-  expect_equal(aux_variance(1, 1),
+  expect_equal(aux_variance(3, 1),
                0)
   expect_equal(aux_variance(2, .5),
                0.5)
@@ -22,7 +22,7 @@ test_that("private function aux_variance produces correct results", {
 })
 
 
-test_that("private function aux_mode produces correct results", {
+test_that("aux_mode is correct", {
 
   expect_equal(aux_mode(1, .5),
                c(1, 0))
@@ -33,7 +33,7 @@ test_that("private function aux_mode produces correct results", {
 })
 
 
-test_that("private function aux_skewness produces correct results", {
+test_that("aux_skewness is correct", {
 
   expect_equal(aux_skewness(1000, .5),
                0)
@@ -44,7 +44,7 @@ test_that("private function aux_skewness produces correct results", {
 })
 
 
-test_that("private function aux_kurtosis produces correct results", {
+test_that("aux_kurtosis is correct", {
 
   expect_equal(aux_kurtosis(10, .5),
                -0.2)

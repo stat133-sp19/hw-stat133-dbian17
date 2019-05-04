@@ -7,15 +7,19 @@
 bin_probability(success, trials, prob)
 }
 \arguments{
-\item{n}{number of trials, k number of successes, prob probility of success in each trial}
+\item{prob}{probility of success in each trial}
+
+\item{n}{number of trials}
+
+\item{k}{number of successes}
 }
 \value{
 the probability of k successes in n trials with probability prob of success in each trial
 }
 \description{
-calculates the probability of k successes in n trials with probability prob of success in each trial
+calculates the probability of k successes in n trials with probability prob of success
 }
 \examples{
-# Calculates probability of 2 successes in 5 trials with probability of success 50\%
-bin_probability(success = 2, trials = 5, prob = 0.5)
+# Calculates probability of 4 successes in 5 trials with probability of success .8
+bin_probability(success = 4, trials = 5, prob = 0.8)
 }

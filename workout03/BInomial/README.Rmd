@@ -1,0 +1,90 @@
+---
+output:
+  github_document:
+    html_preview: false
+---
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+## Overview
+
+"'Binomial'" is a package that provides functions to simulate a binomial distribution
+
+* `bin_choose(n, k)` calculates n choose k
+* `bin_probability(s, t, p)` finds the probability of s successes in t trials with each success occuring with probability p
+* `bin_distribution(t,p)` creates an object with class "bindis" that is a PMF for a binomial distribution with t trials and p probability for success.
+* `bin_cumulative(t,p)` creates and object with class "bincum" that is a CDF for a binomial distribution with t trials and p probability for success.
+* `plot()` method for a `bindis` or 'bincum' object that graphs the distribution.
+* `bin_variable(t, p)` creates an object with class "binvar" with attributes "trials" with value t and "prob" with value p
+* `summary()` method for a "binvar" object that gives key metrics for a given binomial random variable
+* `bin_mean(t, p)` finds the mean of a binomial distribution with trials t and probability p
+* `bin_variance(t, p)` finds the variance of a binomial distribution with trials t and probability p
+* `bin_mode(t, p)` finds the mode of a binomial distribution with trials t and probability p
+* `bin_skewness(t, p)` finds the skewness of a binomial distribution with trials t and probability p
+* `bin_kurtosis(t, p)` finds the kurtosis of a binomial distribution with trials t and probability p
+
+
+## Motivation
+
+This package has been developed to make working with Binomial Distributions in R more convenient 
+
+
+## Installation
+
+Install the development version from GitHub via the package `"devtools"`:
+
+```r
+# development version from GitHub:
+#install.packages("devtools") 
+# install "cointoss" (without vignettes)
+devtools::install_github("gastonstat/cointoss")
+# install "cointoss" (with vignettes)
+devtools::install_github("gastonstat/cointoss", build_vignettes = TRUE)
+```
+
+
+## Usage
+
+```{r}
+library(Binomial)
+
+# 5 choose 3
+bin_choose(5,3)
+
+#Probability of 5 successes in 8 trials with probability of each success being .8
+bin_probability(5, 8, .8)
+
+#Create "bindis" and "bincum" objects with 10 trials and .7 probability of success
+p <- bin_distribution(10, .7)
+head(p)
+
+c <- bin_cumulative(10, .7)
+head(c)
+
+#plotting "bindis" and "bincum" objects
+plot(p)
+plot(c)
+
+#Create a "binvar" object with 20 trials and .8 probability of success
+bin <- bin_variable(20, .8) 
+bin
+
+#summary statistics of "binvar" object
+summary(bin)
+
+#measures of a binomial distribution with 7 trials and .2 probability of success
+
+bin_mean(7, .2)
+bin_variance(7, .2)
+bin_mode(7, .2)
+bin_skewness(7, .2)
+bin_kurtosis(7, .2)
+```

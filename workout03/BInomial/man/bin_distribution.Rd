@@ -7,16 +7,18 @@
 bin_distribution(trials, prob)
 }
 \arguments{
-\item{n}{number of trials, prob probablity of success in each trial}
+\item{prob}{probablity of success}
+
+\item{n}{number of trials}
 }
 \value{
-a dataframe with two classes: "bindis" and "data.frame"
+a dataframe with class "bindis"
 }
 \description{
-calculates the binomial distribution with n trials and probability prob
+calculates the binomial PMF with n trials and probability prob
 }
 \examples{
-# Calculates the distribution of probabilities of each possible number of successes in a dataframe with 5 trials and a probability of .5
-bin_distribution(trials = 5, prob = 0.5)
+# Calculates the PMF of a binomial distribution of 6 trials and a success probability of .5
+bin_distribution(trials = 6, prob = 0.5)
 
 }

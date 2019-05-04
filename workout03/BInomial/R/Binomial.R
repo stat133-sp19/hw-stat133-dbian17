@@ -35,7 +35,7 @@ check_trials <- function(trials){
 
 #Private Function that checks if the number of successes is a valid input
 check_success <- function(success, trials){
-  if(any(success < 0) || any(success > trials)){
+  if(any(success < 0) || any(success > trials) || trials != round(trials)){
     stop("Invalid success value")
   }
   else{
@@ -78,13 +78,14 @@ aux_kurtosis <- function(trials, prob){
 }
 
 #' @title bin_choose
-#' @description calculates the number of combinations in which k successes can occur in n trials
-#' @param n number of trials, k number of successes
+#' @description calculates n choose k
+#' @param n number of trials
+#' @param k number of successes
 #' @return the number of combinations in which k successes can occur in n trials
 #' @export
 #' @examples
-#' # Calculates the number of combinations in which 0 through 2 successes can happen in 5 trials
-#' bin_choose(n = 5, k = 0:2)
+#' # Calculates the number n choose k for n = 7 and k =0,1,2,3
+#' bin_choose(n = 7, k = 0:3)
 #'
 
 bin_choose <- function(n, k){
@@ -97,13 +98,15 @@ bin_choose <- function(n, k){
 }
 
 #' @title bin_probability
-#' @description calculates the probability of k successes in n trials with probability prob of success in each trial
-#' @param n number of trials, k number of successes, prob probility of success in each trial
+#' @description calculates the probability of k successes in n trials with probability prob of success
+#' @param n number of trials
+#' @param k number of successes
+#' @param prob probility of success in each trial
 #' @return the probability of k successes in n trials with probability prob of success in each trial
 #' @export
 #' @examples
-#' # Calculates probability of 2 successes in 5 trials with probability of success 50%
-#' bin_probability(success = 2, trials = 5, prob = 0.5)
+#' # Calculates probability of 4 successes in 5 trials with probability of success .8
+#' bin_probability(success = 4, trials = 5, prob = 0.8)
 
 
 bin_probability <- function(success, trials, prob){
@@ -115,13 +118,14 @@ bin_probability <- function(success, trials, prob){
 }
 
 #' @title bin_distribution
-#' @description calculates the binomial distribution with n trials and probability prob
-#' @param n number of trials, prob probablity of success in each trial
-#' @return a dataframe with two classes: "bindis" and "data.frame"
+#' @description calculates the binomial PMF with n trials and probability prob
+#' @param n number of trials
+#' @param prob probablity of success
+#' @return a dataframe with class "bindis"
 #' @export
 #' @examples
-#' # Calculates the distribution of probabilities of each possible number of successes in a dataframe with 5 trials and a probability of .5
-#' bin_distribution(trials = 5, prob = 0.5)
+#' # Calculates the PMF of a binomial distribution of 6 trials and a success probability of .5
+#' bin_distribution(trials = 6, prob = 0.5)
 #'
 
 bin_distribution <- function(trials, prob){
@@ -136,13 +140,14 @@ plot.bindis <- function(bindis){
 }
 
 #' @title bin_cumulative
-#' @description calculates the cumulative probability of 0 to each possible success value with probability prob of success for each trial n
-#' @param n number of trials, prob probablity of success in each trial
-#' @return a dataframe with two classes: "bincum" and "data.frame"
+#' @description calculates the binomial CDF with n trials and probability prob
+#' @param n number of trials
+#' @param prob probablity of success 
+#' @return a dataframe with class "bincum"
 #' @export
 #' @examples
-#' # Calculates the cumulative distribution of each possible number of successes in a dataframe and object with 5 trials and a probability of .5
-#' bin_cumulative(trials = 5, prob = 0.5)
+#' Calculates the PMF of a binomial distribution of 6 trials and a success probability of .5
+#' bin_cummulative(trials = 6, prob = 0.5)
 
 bin_cumulative <- function(trials, prob){
   distribution <- data.frame(success = 0:trials, probability = bin_probability(0:trials, trials, prob), cumulative = cumsum(bin_probability(0:trials, trials, prob)))
@@ -157,13 +162,14 @@ plot.bincum <- function(bincum){
 }
 
 #' @title bin_variable
-#' @description creates a binomial random variable object with stored values of trials n and probability prob
-#' @param n number of trials, prob probablity of success in each trial
-#' @return an object of class binvar represented by a list
+#' @description creates a binomial random variable object with attributes "trials" and "prob"
+#' @param n number of trials
+#' @param prob probablity of success 
+#' @return an object of class "binvar"
 #' @export
 #' @examples
-#' # Creates a binomial random variable object with 10 trials and a probability of success for each trial of .3
-#' bin1 <- bin_variable(trials = 10, p = 0.3)
+#' # Creates a binomial random variable object with 12 trials and a probability of success for each trial of .1
+#' bin1 <- bin_variable(trials = 12, p = 0.1)
 bin_variable <- function(trials, prob){
   
   check_trials(trials)
@@ -197,9 +203,10 @@ print.summary.binvar <- function(summary.binvar){
 }
 
 #' @title bin_mean
-#' @description calculates the mean number of successes given a number of trials and probability of success for each trial
-#' @param n number of trials, prob probablity of success in each trial
-#' @return the mean of the given binomial distribution with n trials and probability prob of success for each trial
+#' @description finds the mean of a binomial distribution with "trials" and probability "prob"
+#' @param n number of trials
+#' @prob probablity of success 
+#' @return the mean of the given binomial distribution with "trials "trials and probability "prob" of success
 #' @export
 #'
 bin_mean <- function(trials, prob){
@@ -209,9 +216,10 @@ bin_mean <- function(trials, prob){
 }
 
 #' @title bin_variance
-#' @description calculates the variance of the number of successes given a number of trials and probability of success for each trial
-#' @param n number of trials, prob probablity of success in each trial
-#' @return the variance of the given binomial distribution with n trials and probability prob of success for each trial
+#' @description finds the variance of a binomial distribution with "trials" and probability "prob"
+#' @param n number of trials
+#' @prob probablity of success 
+#' @return the variance of the given binomial distribution with "trials "trials and probability "prob" of success
 #' @export
 #'
 bin_variance <- function(trials, prob){
@@ -221,9 +229,10 @@ bin_variance <- function(trials, prob){
 }
 
 #' @title bin_mode
-#' @description calculates the mode of the number of successes given a number of trials and probability of success for each trial
-#' @param n number of trials, prob probablity of success in each trial
-#' @return the mode of the given binomial distribution with n trials and probability prob of success for each trial
+#' @description finds the mode of a binomial distribution with "trials" and probability "prob"
+#' @param n number of trials
+#' @prob probablity of success 
+#' @return the mode of the given binomial distribution with "trials "trials and probability "prob" of success
 #' @export
 #'
 bin_mode <- function(trials, prob){
@@ -233,9 +242,10 @@ bin_mode <- function(trials, prob){
 }
 
 #' @title bin_skewness
-#' @description calculates the skewness of the number of successes given a number of trials and probability of success for each trial
-#' @param n number of trials, prob probablity of success in each trial
-#' @return the skewness of the given binomial distribution with n trials and probability prob of success for each trial
+#' @description finds the skewness of a binomial distribution with "trials" and probability "prob"
+#' @param n number of trials
+#' @prob probablity of success 
+#' @return the skewness of the given binomial distribution with "trials "trials and probability "prob" of success
 #' @export
 #'
 bin_skewness <- function(trials, prob){
@@ -245,9 +255,10 @@ bin_skewness <- function(trials, prob){
 }
 
 #' @title bin_kurtosis
-#' @description calculates the kurtosis of the number of successes given a number of trials and probability of success for each trial
-#' @param n number of trials, prob probablity of success in each trial
-#' @return the kurtosis of the given binomial distribution with n trials and probability prob of success for each trial
+#' @description finds the kurtosis of a binomial distribution with "trials" and probability "prob"
+#' @param n number of trials
+#' @prob probablity of success 
+#' @return the kurtosis of the given binomial distribution with "trials "trials and probability "prob" of success
 #' @export
 #'
 bin_kurtosis <- function(trials, prob){

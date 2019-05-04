@@ -7,15 +7,17 @@
 bin_variable(trials, prob)
 }
 \arguments{
-\item{n}{number of trials, prob probablity of success in each trial}
+\item{prob}{probablity of success}
+
+\item{n}{number of trials}
 }
 \value{
-an object of class binvar represented by a list
+an object of class "binvar"
 }
 \description{
-creates a binomial random variable object with stored values of trials n and probability prob
+creates a binomial random variable object with attributes "trials" and "prob"
 }
 \examples{
-# Creates a binomial random variable object with 10 trials and a probability of success for each trial of .3
-bin1 <- bin_variable(trials = 10, p = 0.3)
+# Creates a binomial random variable object with 12 trials and a probability of success for each trial of .1
+bin1 <- bin_variable(trials = 12, p = 0.1)
 }

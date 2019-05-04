@@ -7,15 +7,17 @@
 bin_cumulative(trials, prob)
 }
 \arguments{
-\item{n}{number of trials, prob probablity of success in each trial}
+\item{prob}{probablity of success}
+
+\item{n}{number of trials}
 }
 \value{
-a dataframe with two classes: "bincum" and "data.frame"
+a dataframe with class "bincum"
 }
 \description{
-calculates the cumulative probability of 0 to each possible success value with probability prob of success for each trial n
+calculates the binomial CDF with n trials and probability prob
 }
 \examples{
-# Calculates the cumulative distribution of each possible number of successes in a dataframe and object with 5 trials and a probability of .5
-bin_cumulative(trials = 5, prob = 0.5)
+Calculates the PMF of a binomial distribution of 6 trials and a success probability of .5
+bin_cummulative(trials = 6, prob = 0.5)
 }
