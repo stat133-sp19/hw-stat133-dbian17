@@ -22,20 +22,6 @@ Motivation
 
 This package has been developed to make working with Binomial Distributions in R more convenient
 
-Installation
-------------
-
-Install the development version from GitHub via the package `"devtools"`:
-
-``` r
-# development version from GitHub:
-#install.packages("devtools") 
-# install "cointoss" (without vignettes)
-devtools::install_github("gastonstat/cointoss")
-# install "cointoss" (with vignettes)
-devtools::install_github("gastonstat/cointoss", build_vignettes = TRUE)
-```
-
 Usage
 -----
 
